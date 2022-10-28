@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="adith"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-28 08:42:44 PM"/>
+        <attribute name="created" value="YWRpdGg7VVNFUjsyMDIyLTEwLTI4OzA4OjMwOjEzIFBNOzIxMTc="/>
+        <attribute name="edited" value="YWRpdGg7VVNFUjsyMDIyLTEwLTI4OzA4OjQyOjQ0IFBNOzE7MjIzMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Name" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the name:&quot;" newline="True"/>
+            <input variable="Name"/>
+            <declare name="RollNo" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the Roll Number:&quot;" newline="True"/>
+            <input variable="RollNo"/>
+            <declare name="Address" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the Address:&quot;" newline="True"/>
+            <input variable="Address"/>
+            <declare name="BloodGroup" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the Blood Group&quot;" newline="True"/>
+            <input variable="BloodGroup"/>
+            <declare name="PhoneNo" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the phone number&quot;" newline="True"/>
+            <input variable="PhoneNo"/>
+            <declare name="Department" type="String" array="False" size=""/>
+            <output expression="&quot;Enter the Department&quot;" newline="True"/>
+            <input variable="Department"/>
+            <output expression="&quot;Roll Number:&quot;&amp;RollNo&amp;&#13;&#10;&quot;Name:&quot;&amp;Name&amp;&#13;&#10;&quot;Address:&quot;&amp;Address&amp;&#13;&#10;&quot;Blood Group:&quot;&amp;BloodGroup&amp;&#13;&#10;&quot;Phone Number:&quot;&amp;PhoneNo&amp;&#13;&#10;&quot;Department:&quot;&amp;Department" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
