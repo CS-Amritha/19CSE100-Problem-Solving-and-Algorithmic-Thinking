@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22016"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:50:24 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA1MzsyMDIyLTExLTA0OzEwOjMyOjUyIEFNOzMwNTA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA1MzsyMDIyLTExLTA0OzEwOjUwOjI0IEFNOzM7MzE1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="To calculate mod of two positive numbers without using the mod function&#13;&#10;"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <comment text="Obtain the numerator"/>
+            <output expression="&quot;Enter the Divisor&quot;" newline="True"/>
+            <input variable="a"/>
+            <comment text="Obtain the denominator"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the Dividend:&quot;" newline="True"/>
+            <input variable="b"/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <comment text="c is the qoutient after division"/>
+            <assign variable="c" expression="a/b"/>
+            <declare name="r" type="Integer" array="False" size=""/>
+            <comment text="r is the reminder"/>
+            <assign variable="r" expression="a-(b*c)"/>
+            <comment text="Print the reminder"/>
+            <output expression="&quot;Reminder of the given divison is:&quot;&amp;r" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
