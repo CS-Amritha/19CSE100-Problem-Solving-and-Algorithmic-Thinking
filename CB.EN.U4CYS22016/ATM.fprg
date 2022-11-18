@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22016"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 09:38:06 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA1MzsyMDIyLTExLTE4OzA4OjU0OjU2IEFNOzMwNzA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA1MzsyMDIyLTExLTE4OzA5OjM4OjA2IEFNOzI7MzE3Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Acc, P, B, M" type="Integer" array="False" size=""/>
+            <declare name="N" type="String" array="False" size=""/>
+            <comment text="Declare Account Details"/>
+            <assign variable="Acc" expression="102045609"/>
+            <assign variable="N" expression="&quot;Peter Parker&quot;"/>
+            <assign variable="B" expression="2000"/>
+            <assign variable="P" expression="2004"/>
+            <comment text="Output ATM instructions "/>
+            <output expression="&quot;---Welcome to Bank of Queens----&quot;" newline="True"/>
+            <output expression="&quot;Insert your card.&quot;" newline="True"/>
+            <output expression="&quot;Enter the amount to be withdrawn&quot;" newline="True"/>
+            <comment text="Obtain the money to be withdrawn"/>
+            <input variable="M"/>
+            <comment text="If the money to be withdrawn reduces the minimum balance,output warning message.Else proceed with the withdrawal."/>
+            <if expression="B-M&gt;500">
+                <then>
+                    <comment text="Obtain the pin from user"/>
+                    <declare name="pin" type="Integer" array="False" size=""/>
+                    <output expression="&quot;Enter the four digit PIN:&quot;" newline="True"/>
+                    <input variable="pin"/>
+                    <comment text="if the pin entered do not match the user's actual pin,display incorrect pin.Else proceed."/>
+                    <if expression="pin==P">
+                        <then>
+                            <output expression="&quot;Name:&quot;&amp;N" newline="True"/>
+                            <output expression="&quot;Money successfully withdrawn!&quot;" newline="True"/>
+                            <output expression="&quot;Account Number:&quot;&amp;Acc" newline="True"/>
+                            <assign variable="B" expression="B-M"/>
+                            <output expression="&quot;Your current Bank Balance is:&quot;&amp;B" newline="True"/>
+                            <output expression="&quot;Thank you for Banking with Queens.Please remove your card.&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;INCORRECT PIN !&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Withdrawal Denied.Minimum Balance should be retained.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
