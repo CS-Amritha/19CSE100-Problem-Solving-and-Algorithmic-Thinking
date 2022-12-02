@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22016"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:24:06 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA1MzsyMDIyLTEyLTAyOzA5OjI0OjM1IEFNOzMwNTk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA1MzsyMDIyLTEyLTAyOzEwOjI0OjA2IEFNOzM7MzE1OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter n:&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="f" type="Integer" array="False" size=""/>
+            <assign variable="f" expression="1"/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <assign variable="c" expression="1"/>
+            <output expression="&quot;Factorial of &quot;&amp;n&amp;&quot; is :&quot;" newline="True"/>
+            <comment text="go until c becomes less than or equal to n"/>
+            <while expression="c&lt;=n">
+                <assign variable="f" expression="f*c"/>
+                <comment text="update c"/>
+                <assign variable="c" expression="c+1"/>
+                <comment text="print the factorial"/>
+                <output expression="f" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

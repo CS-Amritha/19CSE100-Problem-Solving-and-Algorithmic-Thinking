@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22016"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-02 10:19:32 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA1MzsyMDIyLTEyLTAyOzA5OjQ5OjIzIEFNOzMwNjM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA1MzsyMDIyLTEyLTAyOzEwOjE5OjMyIEFNOzQ7MzE2Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring variables"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="1"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <comment text="to print addition table till 10"/>
+            <while expression="n&lt;=10">
+                <output expression="&quot;Addition Table of &quot;&amp;n" newline="True"/>
+                <assign variable="i" expression="1"/>
+                <comment text="to add numbers from 1 to 10 with n"/>
+                <while expression="i&lt;=10">
+                    <output expression="n&amp;&quot;+&quot;&amp;i&amp;&quot;=&quot;&amp;n+i" newline="True"/>
+                    <assign variable="i" expression="i+1"/>
+                </while>
+                <comment text="updating n"/>
+                <assign variable="n" expression="n+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
