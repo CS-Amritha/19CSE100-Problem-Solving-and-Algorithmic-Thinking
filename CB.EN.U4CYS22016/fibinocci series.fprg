@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="amritha_shyam"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-08 10:19:17 PM"/>
+        <attribute name="created" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMi0xMi0wODswOTo0ODo0MSBQTTszNzA5"/>
+        <attribute name="edited" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMi0xMi0wODsxMDoxOToxNyBQTTsxOzM4MTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="n" expression="1"/>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <while expression="i&lt;5">
+                <assign variable="i" expression="n"/>
+                <assign variable="n" expression="sum"/>
+                <assign variable="sum" expression="i+n"/>
+                <output expression="i" newline="False"/>
+                <output expression="&quot;+&quot;" newline="False"/>
+                <output expression="n" newline="False"/>
+                <output expression="&quot;=&quot;" newline="False"/>
+                <output expression="sum" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

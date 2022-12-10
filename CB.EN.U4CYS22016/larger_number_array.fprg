@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="S.RAMESH"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-10 09:56:45 AM"/>
+        <attribute name="created" value="Uy5SQU1FU0g7REVTS1RPUC1ISlBPMTBLOzIwMjItMTItMDk7MTA6NTc6MTggQU07MjkwNg=="/>
+        <attribute name="edited" value="Uy5SQU1FU0g7REVTS1RPUC1ISlBPMTBLOzIwMjItMTItMDk7MTA6NTc6MjMgQU07MTtTLlJBTUVTSDtERVNLVE9QLUhKUE8xMEs7MjAyMi0xMi0wOTswOToxNjozOSBBTTtpbnRfYXJyYXkuZnByZzs3NDg2"/>
+        <attribute name="edited" value="Uy5SQU1FU0g7REVTS1RPUC1ISlBPMTBLOzIwMjItMTItMDk7MTE6MjM6MDUgQU07MjszMDA1"/>
+        <attribute name="edited" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMi0xMi0xMDswOTo1Njo0NSBBTTsxOzM3OTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="max" type="Integer" array="False" size=""/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <declare name="val" type="Integer" array="True" size="5"/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <comment text="obtain values for array"/>
+                <output expression="&quot;enter the value&quot;" newline="True"/>
+                <input variable="value"/>
+                <comment text="add values into array"/>
+                <assign variable="val[index]" expression="value"/>
+            </for>
+            <output expression="&quot;array contents&quot;" newline="True"/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <comment text="to print the vals iin the array "/>
+                <output expression="&quot;the array contains&quot;" newline="False"/>
+                <output expression="index" newline="False"/>
+                <output expression="&quot;=&quot;" newline="False"/>
+                <output expression="val[index]" newline="True"/>
+            </for>
+            <assign variable="max" expression="val[0]"/>
+            <for variable="index" start="0" end="4" direction="inc" step="1">
+                <comment text="finding the largest number"/>
+                <if expression="val[index]&gt;max">
+                    <then>
+                        <assign variable="max" expression="val[index]"/>
+                        <output expression="&quot;the largest no&quot;" newline="False"/>
+                        <output expression="max" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="amritha_shyam"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 10:45:08 AM"/>
+        <attribute name="created" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMi0xMi0wOTsxMDoyMzo1OCBBTTszNjg4"/>
+        <attribute name="edited" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMi0xMi0wOTsxMDo0NTowOCBBTTsxOzM3OTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of students:&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="m1" type="Integer" array="True" size="n"/>
+            <declare name="m2" type="Integer" array="True" size="n"/>
+            <declare name="m3" type="Integer" array="True" size="n"/>
+            <declare name="R" type="Integer" array="True" size="n"/>
+            <declare name="Avg" type="Integer" array="True" size="n"/>
+            <declare name="T" type="Integer" array="True" size="n"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Enter mark1 for student&quot;&amp;index+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="m1[index]"/>
+                <output expression="&quot;Enter mark2 for student&quot;&amp;index+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="m2[index]"/>
+                <output expression="&quot;Enter mark3 for student&quot;&amp;index+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="m3[index]"/>
+                <output expression="&quot;Enter Roll Number for student&quot;&amp;index+1&amp;&quot;&quot;" newline="True"/>
+                <input variable="R[index]"/>
+            </for>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="T[index]" expression="m1[index]+m2[index]+m3[index]"/>
+                <assign variable="Avg[index]" expression="m1[index]+m2[index]+m3[index]/3"/>
+            </for>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;RollNumber:&quot;&amp;R[index]&amp;&quot;&quot;" newline="True"/>
+                <output expression="&quot;Mark1: &quot;&amp;m1[index]&amp;&quot;&quot;" newline="False"/>
+                <output expression="&quot;Mark2: &quot;&amp;m2[index]&amp;&quot;&quot;" newline="False"/>
+                <output expression="&quot;Mark3: &quot;&amp;m3[index]&amp;&quot;&quot;" newline="True"/>
+                <output expression="&quot;Total:&quot;&amp;T[index]&amp;&quot;&quot;" newline="True"/>
+                <output expression="&quot;Average:&quot;&amp;Avg[index]&amp;&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
