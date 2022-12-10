@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="amritha_shyam"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-10 10:25:48 AM"/>
+        <attribute name="created" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMi0xMi0xMDsxMDowMTowOCBBTTszNjcx"/>
+        <attribute name="edited" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMi0xMi0xMDsxMDoyNTo0OCBBTTsyOzM3OTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Obtaining array"/>
+            <declare name="list" type="Integer" array="True" size="10"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <declare name="val" type="Integer" array="False" size=""/>
+                <output expression="&quot;Enter the array elements:&quot;" newline="True"/>
+                <input variable="val"/>
+                <assign variable="list[index]" expression="val"/>
+            </for>
+            <comment text="displaying array"/>
+            <output expression="&quot;THE ARRAY IS:&quot;" newline="True"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;for index :&quot;&amp;index" newline="True"/>
+                <output expression="list[index]" newline="True"/>
+            </for>
+            <comment text="initialising a variable to keep count"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <declare name="f" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the value to count frequency of:&quot;" newline="True"/>
+            <comment text="taking the value from user for the number frequency has to be found"/>
+            <input variable="f"/>
+            <for variable="index" start="0" end="9" direction="inc" step="1">
+                <if expression="list[index]==f">
+                    <then>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Frequency of &quot;&amp;f&amp;&quot; is &quot;" newline="True"/>
+            <output expression="count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
