@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22016"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-20 10:54:31 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA4NzsyMDIzLTAxLTIwOzA5OjA4OjQ1IEFNOzMwNjg="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjAxNjsyMDIyMjNNQVlDMDA4NzsyMDIzLTAxLTIwOzEwOjU0OjMxIEFNOzE7MzE2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Variable declaration"/>
+            <declare name="index" type="Integer" array="False" size=""/>
+            <declare name="pos" type="Integer" array="False" size=""/>
+            <declare name="Val" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="min" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Number of Elements:&quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="Nums" type="Integer" array="True" size="n"/>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <comment text="input array elements"/>
+                <output expression="&quot;Enter the values:&quot;" newline="True"/>
+                <input variable="Val"/>
+                <assign variable="Nums[index]" expression="Val"/>
+            </for>
+            <comment text="Loop to swap"/>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="min" expression="Nums[index]"/>
+                <declare name="c" type="Integer" array="False" size=""/>
+                <declare name="j" type="Integer" array="False" size=""/>
+                <for variable="j" start="index" end="n-1" direction="inc" step="1">
+                    <comment text="Loop to find minimum value"/>
+                    <if expression="min&gt;Nums[j]">
+                        <then>
+                            <assign variable="min" expression="Nums[j]"/>
+                            <comment text="Noting the position of minimum value"/>
+                            <assign variable="pos" expression="j"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <comment text="Swapping "/>
+                <assign variable="c" expression="Nums[index]"/>
+                <assign variable="Nums[index]" expression="min"/>
+                <assign variable="min" expression="c"/>
+                <comment text="Assigning minimum value to noted position"/>
+                <assign variable="Nums[pos]" expression="min"/>
+            </for>
+            <output expression="&quot;---Selection sorted Array----&quot;" newline="True"/>
+            <for variable="index" start="0" end="n-1" direction="inc" step="1">
+                <comment text="Sorted Array display"/>
+                <output expression="Nums[index]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
