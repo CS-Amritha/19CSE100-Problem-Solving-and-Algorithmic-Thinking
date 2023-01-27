@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="amritha_shyam"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 09:55:31 PM"/>
+        <attribute name="created" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMy0wMS0yNzswOTowNDo0MiBQTTszNzAy"/>
+        <attribute name="edited" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMy0wMS0yNzswOTo1NTozMSBQTTsyOzM4MTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="declaring variables"/>
+            <declare name="i, j, n" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="0"/>
+            <assign variable="j" expression="1"/>
+            <comment text="input for n"/>
+            <output expression="&quot;Enter n until which fibinocci series has to be calculated:&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="function call with i,j,n as parameters"/>
+            <call expression="fibinocci(i,j,n)"/>
+        </body>
+    </function>
+    <function name="fibinocci" type="None" variable="fib">
+        <parameters>
+            <parameter name="i" type="Integer" array="False"/>
+            <parameter name="j" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="declaring a temporary variable for swapping"/>
+            <declare name="temp" type="Integer" array="False" size=""/>
+            <declare name="fib" type="Integer" array="False" size=""/>
+            <comment text="condition until which the function will loop"/>
+            <if expression="n&gt;0">
+                <then>
+                    <comment text="logic for fibinocci series"/>
+                    <output expression="i" newline="True"/>
+                    <assign variable="temp" expression="i"/>
+                    <assign variable="i" expression="j"/>
+                    <assign variable="j" expression="j+temp"/>
+                    <assign variable="n" expression="n-1"/>
+                    <comment text="function within a function"/>
+                    <call expression="fibinocci(i,j,n)"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

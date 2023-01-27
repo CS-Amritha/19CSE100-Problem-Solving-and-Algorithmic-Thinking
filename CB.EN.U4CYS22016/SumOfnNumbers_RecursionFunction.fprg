@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="amritha_shyam"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 08:50:11 PM"/>
+        <attribute name="created" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMy0wMS0yNzswODoxNDoxMSBQTTszNjk4"/>
+        <attribute name="edited" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMy0wMS0yNzswODo1MDoxMSBQTTsxOzM4MDY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring the variables"/>
+            <declare name="n, sum" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number n till which sum should be calculated:&quot;" newline="True"/>
+            <comment text="inputing n"/>
+            <input variable="n"/>
+            <comment text="function call"/>
+            <assign variable="sum" expression="s(n)"/>
+            <comment text="Displaying output"/>
+            <output expression="sum" newline="True"/>
+        </body>
+    </function>
+    <function name="s" type="Integer" variable="sum">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sum" type="Integer" array="False" size=""/>
+            <comment text="condition till which n should go on"/>
+            <if expression="n==0">
+                <then>
+                    <assign variable="sum" expression="0"/>
+                </then>
+                <else>
+                    <comment text="function within a function that act as a loop and also calculates sum"/>
+                    <assign variable="sum" expression="s(n-1)+n"/>
+                </else>
+            </if>
+            <comment text="returning the value of sum&#13;&#10;"/>
+        </body>
+    </function>
+</flowgorithm>

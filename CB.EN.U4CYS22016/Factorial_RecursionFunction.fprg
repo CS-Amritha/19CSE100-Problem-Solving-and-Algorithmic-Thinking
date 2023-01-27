@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="amritha_shyam"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-27 08:56:45 PM"/>
+        <attribute name="created" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMy0wMS0yNzswODoxNDoxMSBQTTszNjk4"/>
+        <attribute name="edited" value="YW1yaXRoYV9zaHlhbTtBTVJJVEhBU0hZQTc3MDY7MjAyMy0wMS0yNzswODo1Njo0NSBQTTsyOzM4MjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring the variables"/>
+            <declare name="n, fact" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter number n till which factorial should be calculated:&quot;" newline="True"/>
+            <comment text="inputing n"/>
+            <input variable="n"/>
+            <comment text="function call"/>
+            <assign variable="fact" expression="f(n)"/>
+            <comment text="Displaying output"/>
+            <output expression="fact" newline="True"/>
+        </body>
+    </function>
+    <function name="f" type="Integer" variable="fact">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fact" type="Integer" array="False" size=""/>
+            <comment text="condition till which n should go on"/>
+            <if expression="n==1">
+                <then>
+                    <assign variable="fact" expression="1"/>
+                </then>
+                <else>
+                    <comment text="function within a function that act as a loop and also calculates factorial"/>
+                    <assign variable="fact" expression="f(n-1)*n"/>
+                </else>
+            </if>
+            <comment text="returning the value of fact"/>
+        </body>
+    </function>
+</flowgorithm>
